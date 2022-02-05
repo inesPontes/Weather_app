@@ -1,0 +1,109 @@
+.form-control {
+  border-radius: 1.25rem;
+  max-width: 50%;
+  display: inline;
+  margin: auto;
+}
+
+.currentLocation {
+  display: inline;
+}
+
+body {
+  border: 5px solid rgb(228, 225, 225);
+  border-radius: 10px;
+  max-width: 70%;
+  line-height: 1;
+  margin: 20px auto;
+}
+
+.searchbar {
+  margin-left: 200px;
+}
+
+h1 {
+  padding: 20px;
+}
+
+h2 {
+  color: #385170;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+}
+h1,
+h3 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+  color: #385170;
+}
+
+.date {
+  font-weight: strong;
+  color: rgb(77, 75, 75);
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+p {
+  font-weight: strong;
+  font-size: 20px;
+  color: #385170;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.temp {
+  font-size: 40px;
+}
+
+.location {
+  display: inline;
+  color: #385170;
+}
+
+.meteo {
+  color: #385170;
+  font-size: 40px;
+}
+
+.todays-weather {
+  border: 2px solid rgb(228, 225, 225);
+  border-radius: 10px;
+  text-align: center;
+  background-color: #9fd3c75b;
+  margin: auto 49px 0 20px;
+}
+
+.forecast {
+  border: 2px solid rgb(228, 225, 225);
+  border-radius: 10px;
+  background-color: #9fd3c7;
+  padding: 10px;
+  margin: 20px 49px;
+}
+
+.sun-cloud {
+  color: #385170;
+  font-size: 300px;
+  max-width: 80%;
+  display: block;
+  margin: auto 40px;
+}
+
+.forecast {
+  text-align: Center;
+}
+
+.wind {
+  font-size: 15px;
+}
+
+.sunrise {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 0px;
+  margin: 0;
+}
