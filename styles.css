@@ -9,7 +9,7 @@
   display: inline;
 }
 
-body {
+.main {
   border: 5px solid rgb(228, 225, 225);
   border-radius: 10px;
   max-width: 70%;
@@ -106,4 +106,9 @@ p {
   font-weight: normal;
   line-height: 0px;
   margin: 0;
+}
+
+.coder {
+  display: inline;
+  margin: 0 0 0 200px;
 }
