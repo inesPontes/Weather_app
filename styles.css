@@ -1,28 +1,11 @@
-.form-control {
-  border-radius: 1.25rem;
-  max-width: 50%;
-  display: inline;
-  margin: auto;
-}
-
-.currentLocation {
-  display: inline;
-}
-
-.main {
-  border: 5px solid rgb(228, 225, 225);
-  border-radius: 10px;
-  max-width: 70%;
-  line-height: 1;
-  margin: 20px auto;
-}
-
-.searchbar {
-  margin-left: 200px;
+body {
+  background-color: #e4f1fe;
 }
 
 h1 {
+  font-family: "Montserrat", sans-serif;
   padding: 20px;
+  color: #385170;
 }
 
 h2 {
@@ -31,12 +14,43 @@ h2 {
   font-family: "Montserrat", sans-serif;
   padding: 20px;
 }
-h1,
+
 h3 {
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  padding: 20px;
+  font-size: 20px;
+}
+
+p,
+li {
+  font-weight: strong;
+  font-size: 20px;
   color: #385170;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  list-style-type: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  border-radius: 16px;
+  max-width: 850px;
+  line-height: 0.5;
+  margin: 50px auto;
+  padding: 40px;
+  box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
+  background-color: white;
+}
+
+.searchbar {
+  border-radius: 1.25rem;
+}
+
+.city {
+  text-align: center;
+  padding: 20px;
 }
 
 .date {
@@ -45,14 +59,6 @@ h3 {
   font-size: 15px;
   font-family: "Montserrat", sans-serif;
   margin: 0;
-}
-
-p {
-  font-weight: strong;
-  font-size: 20px;
-  color: #385170;
-  padding: 10px;
-  font-family: "Montserrat", sans-serif;
 }
 
 .temp {
@@ -70,27 +76,20 @@ p {
 }
 
 .todays-weather {
-  border: 2px solid rgb(228, 225, 225);
-  border-radius: 10px;
-  text-align: center;
-  background-color: #9fd3c75b;
-  margin: auto 49px 0 20px;
+  text-align: left;
+  margin-left: 50px;
+  color: #385170;
+  font-family: "Montserrat", sans-serif;
 }
 
-.forecast {
-  border: 2px solid rgb(228, 225, 225);
-  border-radius: 10px;
-  background-color: #9fd3c7;
-  padding: 10px;
-  margin: 20px 49px;
+.todaysDate {
+  font-size: 30px;
 }
 
 .sun-cloud {
   color: #385170;
-  font-size: 300px;
-  max-width: 80%;
-  display: block;
-  margin: auto 40px;
+  font-size: 100px;
+  margin-top: 20px;
 }
 
 .forecast {
@@ -109,6 +108,7 @@ p {
 }
 
 .coder {
-  display: inline;
-  margin: 0 0 0 200px;
+  padding: 10px;
+  margin-top: 30px;
+  text-align: center;
 }

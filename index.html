@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>Weather App</title>
+    <title>Weather App 🌞</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,25 +24,26 @@
     
   </head>
   <body>
-    <div class="main">
-    <div class="container">
+ 
 
-
+  <div class="container"></div>  
+  <div class="main">
+    
       <label for="inputPassword5" class="form-label search"></label>
       <form class="cityname">
-        <div class=row>
-          <div class="col-6 ">
-      <input type="search" id="inputPassword5"
-      class="form-control searchbar cityInput"
-      aria-describedby="passwordHelpBlock"
-      placeholder="Search City"
-      class="form-control"
+        <div class="row justify-content-center">
+        <div class="col-6 ">
+          <input type="search" id="inputPassword5"
+          class="form-control searchbar cityInput"
+          aria-describedby="passwordHelpBlock"
+          placeholder="Search City"
+         class="form-control"
       />
       </div>
-      <div class= "col-3 ">
-            <button type="submit" class="btn btn-primary form-control">Submit</button>
-            </div>
-            <div class= "col-3">
+       <div class= "col-2 ">
+         <button type="submit" class="btn btn-primary form-control submit">Submit</button>
+       </div>
+            <div class= "col-2">
               <button type="button" class="btn btn-success currentLocation">Current</button>
             </div>
           </div>
@@ -54,77 +55,81 @@
       
       <div class="row">
         <div class="col-6">
-          <i class="fas fa-cloud-sun sun-cloud"></i>
-        </div>
-        <div class="col-6">
-          <div class="todays-weather">
-            <h3 class="todaysDate">day</h3>
-            <p class="weather-summary">Partly clouded</p>
+          <ul class="todays-weather">
+            <li><h3 class="todaysDate">day</h3></li>
+            <li class="temp">20ºC</li>
+            <li class="weather-summary">Partly clouded</li>                      
             
-            <p class="temp">20ºC</p>
-            <p class="temp_intervale">10-25ºC</p>
-            <p class="wind">Wind: 13km/h</p>
-          </div>
+            <li class="temp_intervale">10-25ºC</li>
+            <li class="wind">Wind: 13km/h</li>
+          </ul>
         </div>
-      </div>
+        <div class="col-md-3 offset-md-2 today">
+         <i class="fas fa-cloud-sun sun-cloud"></i>
+       </div>
+       </div>
       
-      <div class="forecast">
-        <h2>5 Days Forecast in Lisbon</h2>
-        <div class="row">
+       <div class="forecast">
+        <h2>5 Days Forecast</h2>
+        <div class="row justify-content-center">
           <div class="col">
-            <p class="date">Tuesday (November 3)</p>
-            <h3>Sunny</h3>
-            <i class="far fa-sun meteo"></i>
-            <p>10-22ºC</p>
-            <p class="wind">Wind: 6 km/h</p>
+            <ul>
+              <li class="date">Tuesday</li>
+              <li class="description">Sunny</li>
+              <li><i class="far fa-sun meteo"></i></li>
+              <li>10-22ºC</li>
+              <li class="wind">Wind: 6 km/h</li>
+              
+            </ul>
+</div>
+<div class="col">
+            <ul>
+              <li class="date">Tuesday</li>
+              <li class="description">Sunny</li>
+              <li><i class="far fa-sun meteo"></i></li>
+              <li>10-22ºC</li>
+              <li class="wind">Wind: 6 km/h</li>
+            </ul>
+</div>
+<div class="col">
+            <ul>
+              <li class="date">Tuesday</li>
+              <li class="description">Sunny</li>
+              <li><i class="far fa-sun meteo"></i></li>
+              <li>10-22ºC</li>
+              <li class="wind">Wind: 6 km/h</li>
+            </ul>
+</div>
+<div class="col">
+            <ul>
+              <li class="date">Tuesday</li>
+              <li class="description">Sunny</li>
+              <li><i class="far fa-sun meteo"></i></li>
+              <li>10-22ºC</li>
+              <li class="wind">Wind: 6 km/h</li>
+            </ul>
+</div>
+<div class="col">
+            <ul>
+              <li class="date">Tuesday</li>
+              <li class="description">Sunny</li>
+              <li><i class="far fa-sun meteo"></i></li>
+              <li>10-22ºC</li>
+              <li class="wind">Wind: 6 km/h</li>
+            </ul>
+            </div>
+          </div>
             
-            <p class="sunrise">Sunrire: 6:15am</p>
-            <p class="sunrise">Sunset: 19:55pm</p>
-          </div>
-          <div class="col">
-            <p class="date">Tuesday (November 4)</p>
-            
-            <h3>Cloudy</h3>
-            <i class="fas fa-cloud meteo"></i>
-            <p>9-20ºC</p>
-            <p class="wind">Wind: 12 km/h</p>
-            <p class="sunrise">Sunrire: 6:15am</p>
-            <p class="sunrise">Sunset: 19:55pm</p>
-          </div>
-          <div class="col">
-            <p class="date">Wednesday (November 5)</p>
-            
-            <h3>Cloudy</h3>
-            <i class="fas fa-cloud meteo"></i>
-            <p>8-18ºC</p>
-            <p class="wind">Wind: 20 km/h</p>
-            <p class="sunrise">Sunrire: 6:15am</p>
-            <p class="sunrise">Sunset: 19:55pm</p>
-          </div>
-          <div class="col">
-            <p class="date">Thrusday (November 6)</p>
-            <h3>Rainny</h3>
-            <i class="fas fa-cloud-showers-heavy meteo"></i>
-            <p>10-19ºC</p>
-            <p class="wind">Wind: 19 km/h</p>
-            <p class="sunrise">Sunrire: 6:15am</p>
-            <p class="sunrise">Sunset: 19:55pm</p>
-          </div>
-          <div class="col">
-            <p class="date">Friday (November 7)</p>
-            <h3>Sunny</h3>
-            <i class="far fa-sun meteo"></i>
-            <p>12-24ºC</p>
-            <p class="wind">Wind: 6 km/h</p>
-            <p class="sunrise">Sunrire: 6:15am</p>
-            <p class="sunrise">Sunset: 19:55pm</p>
-          </div>
+      <div class="coder"><a href="https://github.com/inesPontes/Weather_app">Open source code<a> by Inês Pontes</div>
           </div>
         </div>
+        
+       </div>
+       
       </div>
-    </div>
+    
     <script src="code.js" /></script>
-    <div class="coder"><a href="https://github.com/inesPontes/Weather_app">Open source code<a> by Inês Pontes</div>
+    
   </body>
   </html>
   
