@@ -34,6 +34,10 @@ ul {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .main {
   border-radius: 16px;
   max-width: 850px;
@@ -95,6 +99,21 @@ ul {
   width: 80%;
   margin: auto;
   margin-bottom: 15px;
+}
+
+.units {
+  position: relative;
+  font-size: 16px;
+  top: -18px;
+}
+
+.active {
+  color: #385170;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
 }
 
 .forecast {

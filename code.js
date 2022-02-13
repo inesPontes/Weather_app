@@ -29,11 +29,11 @@ function displayTemperature(response) {
   exampleCity.innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector(".temp");
-  temperatureElement.innerHTML = `${temperature} ºC`;
+  temperatureElement.innerHTML = `${temperature}`;
   let description = response.data.weather[0].main;
   let descriptionElement = document.querySelector(".weather-summary");
   descriptionElement.innerHTML = `${description}`;
-  let windValue = response.data.wind.speed;
+  let windValue = Math.round(response.data.wind.speed);
   let windElement = document.querySelector(".wind");
   windElement.innerHTML = `Wind Speed: ${windValue}km/h`;
   let maxTemp = Math.round(response.data.main.temp_max);
@@ -85,5 +85,32 @@ function searchLocation(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(displayTemperature);
 }
+
+//Change temperature Unit
+
+function showFarenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".temp");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showcelsiustTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector(".temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#Fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFarenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showcelsiustTemperature);
 
 searchCity("Lisbon");
