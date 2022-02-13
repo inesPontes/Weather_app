@@ -32,7 +32,7 @@ function displayTemperature(response) {
   let description = response.data.weather[0].main;
   let descriptionElement = document.querySelector(".weather-summary");
   descriptionElement.innerHTML = `${description}`;
-  let windValue = response.data.wind.speed;
+  let windValue = Math.round(response.data.wind.speed);
   let windElement = document.querySelector(".wind");
   windElement.innerHTML = `Wind Speed: ${windValue}km/h`;
   let maxTemp = Math.round(response.data.main.temp_max);
@@ -41,6 +41,11 @@ function displayTemperature(response) {
   tempIntervaleElement.innerHTML = `${minTemp} - ${maxTemp}ºC`;
   let dateElement = document.querySelector(".todaysDate");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/1${response.weather[0].icon}@2x.png`
+  );
 }
 
 let defaultCity = "Lisbon";
@@ -66,7 +71,7 @@ function showWeather(response) {
   let description = response.data.weather[0].main;
   let descriptionElement = document.querySelector(".weather-summary");
   descriptionElement.innerHTML = `${description}`;
-  let windValue = response.data.wind.speed;
+  let windValue = Math.round(response.data.wind.speed);
   let windElement = document.querySelector(".wind");
   windElement.innerHTML = `Wind Speed: ${windValue}km/h`;
   let maxTemp = Math.round(response.data.main.temp_max);

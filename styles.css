@@ -68,6 +68,7 @@ ul {
 .location {
   display: inline;
   color: #385170;
+  margin-right: 5px;
 }
 
 .meteo {
@@ -86,10 +87,10 @@ ul {
   font-size: 30px;
 }
 
-.sun-cloud {
-  color: #385170;
-  font-size: 100px;
-  margin-top: 20px;
+.line {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 15px;
 }
 
 .forecast {
