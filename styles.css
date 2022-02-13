@@ -87,6 +87,10 @@ ul {
   font-size: 30px;
 }
 
+#icon {
+  float: left;
+}
+
 .line {
   width: 80%;
   margin: auto;
