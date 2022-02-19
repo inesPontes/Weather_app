@@ -88,33 +88,6 @@ function searchLocation(position) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
-//Change temperature Unit
-
-function showFarenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector(".temp");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function showcelsiustTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector(".temp");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#Fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFarenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showcelsiustTemperature);
-
 searchCity("Lisbon");
 
 //Forecast
