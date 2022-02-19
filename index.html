@@ -32,7 +32,7 @@
       <label for="inputPassword5" class="form-label search"></label>
       <form class="cityname">
         <div class="row justify-content-center">
-        <div class="col-6 ">
+        <div class="col-8 ">
           <input type="search" id="inputPassword5"
           class="form-control searchbar cityInput"
           aria-describedby="passwordHelpBlock"
@@ -40,39 +40,47 @@
          class="form-control"
       />
       </div>
-       <div class= "col-2 ">
+       <div class= "col-3 ">
          <button type="submit" class="btn btn-primary form-control submit">Submit</button>
        </div>
-            <div class= "col-3">
-              <button type="button" class="btn btn-success currentLocation">📍</button>
+            <div class= "col-1">
+              <button type="button" class="btn btn-success currentLocation"><i class="fas fa-map-marker-alt location"></i></button>
             </div>
           </div>
           </form>
       <div id="passwordHelpBlock" class="form-text"></div>
       <br />
       
-      <h1 class="city"><i class="fas fa-map-marker-alt location"></i><span class="exampleCity">Lisbon</span></h1>
+      <h1 class="city">📍 <span class="exampleCity">Lisbon</span></h1>
       
       <div class="row">
-        <div class="col-6">
+        <div class="col-7">
           <ul class="todays-weather">
-           <li> <h3 class="todaysDate"></h3></li>
            
-            <li><span class="temp">20</span>
-              <small class = "units">ºC</small>
-            <li class="weather-summary">Partly clouded</li>                      
+          
+             <li><h3 class="todaysDate"></h3></li>
             
-            <li class="temp_intervale">10-25ºC</li>
-            <li class="wind">Wind: 13km/h</li>
+            <li> <img src="example" alt="clear" id="icon"></li>
+           <li class="temp-unit"><span class="temp">20</span>ºC</li>
+           <br>
+           <li class="warning">warning</li>
+           
           </ul>
         </div>
-        <div class="col-md-3 offset-md-2 today">
-         <img src="example" alt="clear" id="icon">
+        <div class="col-5 today">
+         
+         <div class="weather-summary"><strong>Partly clouded</strong></div>        
+         <div class="todays-conditions">
+           <div class="temp_intervale">10-25ºC></div>
+           <div class="wind">Wind: 13km/h></div> 
+           <div class="humidity">Humidity: 12%</div> 
+          </div>
+         
        </div>
        </div>
       
        <div class="forecast">
-        <h2>5 Days Forecast</h2>
+        <h2>5 Day Forecast</h2>
         <hr class="line">
         <div id="weather-forecast"></div>
       </div>

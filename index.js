@@ -32,14 +32,21 @@ function displayTemperature(response) {
   temperatureElement.innerHTML = `${temperature}`;
   let description = response.data.weather[0].main;
   let descriptionElement = document.querySelector(".weather-summary");
-  descriptionElement.innerHTML = `${description}`;
+
+  descriptionElement.innerHTML = `Hello 🖐 Today is going to be ${description}`;
+
+  displayWarning(description);
+
+  let humidity = response.data.main.humidity;
+  let humidityElement = document.querySelector(".humidity");
+  humidityElement.innerHTML = `Humidity: ${humidity}%`;
   let windValue = Math.round(response.data.wind.speed);
   let windElement = document.querySelector(".wind");
   windElement.innerHTML = `Wind Speed: ${windValue}km/h`;
   let maxTemp = Math.round(response.data.main.temp_max);
   let minTemp = Math.round(response.data.main.temp_min);
   let tempIntervaleElement = document.querySelector(".temp_intervale");
-  tempIntervaleElement.innerHTML = `${minTemp} - ${maxTemp}ºC`;
+  tempIntervaleElement.innerHTML = `Temperature: ${minTemp} - ${maxTemp}ºC`;
   let dateElement = document.querySelector(".todaysDate");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
 
@@ -52,6 +59,15 @@ function displayTemperature(response) {
   );
 
   getForecast(response.data.coord);
+}
+
+function displayWarning() {
+  if (
+    document.querySelector(".weather-summary") ==
+    `Hello 🖐 Today is going to be Clear`
+  ) {
+    document.querySelector(".warning").innerHTML = `Don´t forget your ☂`;
+  }
 }
 
 function searchCity(location) {
@@ -121,10 +137,12 @@ function displayForecast(response) {
           alt=""
           width="42"
         /></li>
-   <li>${Math.round(forecastDay.temp.min)}ºC - ${Math.round(
+   <li class="temp-forecast"><span class="min-forecast-temp">${Math.round(
+     forecastDay.temp.min
+   )}ºC</span> - <span class="max-forecast-temp">${Math.round(
           forecastDay.temp.max
-        )}ºC</li>
-   <li class="wind">Wind: 6 km/h</li>
+        )}ºC</span></li>
+   
   </ul>
   </div>`;
     }

@@ -22,7 +22,7 @@ h3 {
 p,
 li {
   font-weight: strong;
-  font-size: 20px;
+
   color: #385170;
   padding: 10px;
   font-family: "Montserrat", sans-serif;
@@ -38,11 +38,15 @@ a {
   text-decoration: none;
 }
 
+.btn {
+  border-radius: 1.25rem;
+}
+
 .main {
   border-radius: 16px;
-  max-width: 850px;
+  max-width: 650px;
   line-height: 0.5;
-  margin: 50px auto;
+  margin: 50px auto 5px auto;
   padding: 40px;
   box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
   background-color: white;
@@ -54,7 +58,13 @@ a {
 
 .city {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
+  font-size: 30px;
+}
+
+.cityname {
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .date {
@@ -65,14 +75,70 @@ a {
   margin: 0;
 }
 
-.temp {
-  font-size: 40px;
+.temp,
+.temp-unit {
+  font-size: 20px;
+  padding: 3px;
+  color: #465a72;
+}
+
+.temp-unit {
+  position: relative;
+  top: -18px;
+  left: -35px;
+}
+
+.today {
+  line-height: 25px;
+  text-align: center;
+  background-color: aliceblue;
+  max-width: 220px;
+  border-radius: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.weather-summary {
+  padding-top: 15px;
+  font-size: 20px;
+  padding-bottom: 10px;
+  color: #385170;
+}
+
+.submit {
+  background-color: #5aa5f0;
+  border-color: #5aa5f0;
+}
+.submit:hover {
+  background-color: #047af0;
+  border-color: #047af0;
+}
+
+.submit:focus {
+  background-color: #047af0;
+  border-color: #047af0;
+  box-shadow: 0 0 0 0.25rem rgba(85, 125, 131, 0.5);
 }
 
 .location {
   display: inline;
-  color: #385170;
-  margin-right: 5px;
+  color: rgb(80, 78, 78);
+  margin: 0 5px;
+}
+
+.currentLocation {
+  background-color: #f3e5b1;
+  border-color: #f3e5b1;
+}
+
+.currentLocation:hover {
+  background-color: #e9c854;
+  border-color: #e9c854;
+}
+
+.currentLocation:focus {
+  background-color: #e9c854;
+  border-color: #e9c854;
+  box-shadow: 0 0 0 0.25rem rgba(118, 119, 96, 0.5);
 }
 
 .meteo {
@@ -87,16 +153,24 @@ a {
   font-family: "Montserrat", sans-serif;
 }
 
+.todays-conditions {
+  color: #465a72;
+  font-size: 14px;
+}
+
 .todaysDate {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 #icon {
   float: left;
+  position: relative;
+  top: -38px;
+  left: -25px;
 }
 
 .line {
-  width: 80%;
+  width: 85%;
   margin: auto;
   margin-bottom: 15px;
 }
@@ -118,10 +192,7 @@ a {
 
 .forecast {
   text-align: Center;
-}
-
-.wind {
-  font-size: 15px;
+  margin-top: 10px;
 }
 
 .sunrise {
@@ -133,6 +204,9 @@ a {
 
 .coder {
   padding: 10px;
-  margin-top: 30px;
   text-align: center;
+}
+
+.temp-forecast {
+  font-size: 14px;
 }
