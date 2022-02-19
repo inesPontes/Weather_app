@@ -114,3 +114,35 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showcelsiustTemperature);
 
 searchCity("Lisbon");
+displayForecast();
+
+//Forecast
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+
+  let forecastHTML = `<div class="row justify-content-center">`;
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col">
+  <ul>
+  <li class="date">${day}</li>
+  
+  <li><i class="far fa-sun meteo"></i></li>
+  <li>10-22ºC</li>
+  <li class="wind">Wind: 6 km/h</li>
+  
+  </ul>
+  </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
