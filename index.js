@@ -61,12 +61,35 @@ function displayTemperature(response) {
   getForecast(response.data.coord);
 }
 
-function displayWarning() {
+function displayWarning(description) {
   if (
-    document.querySelector(".weather-summary") ==
-    `Hello 🖐 Today is going to be Clear`
+    description === "Rain" ||
+    description === "shower rain" ||
+    description === "thunderstorm"
   ) {
-    document.querySelector(".warning").innerHTML = `Don´t forget your ☂`;
+    document.querySelector(".warning").innerHTML = `Don´t forget your umbrela!`;
+  } else {
+    if (description === "Clear" || description === "few clouds") {
+      document.querySelector(".warning").innerHTML = `Enjoy the sun 😁`;
+    } else {
+      if (description === "Snow") {
+        document.querySelector(".warning").innerHTML = `Wear a warm coat today`;
+      } else {
+        if (
+          description === "scattered clouds" ||
+          description === "broken clouds" ||
+          description === "clouds"
+        ) {
+          document.querySelector(
+            ".warning"
+          ).innerHTML = `You won´t need your sunscrean today`;
+        } else {
+          document.querySelector(
+            ".warning"
+          ).innerHTML = `With mist, drive carefully`;
+        }
+      }
+    }
   }
 }
 
