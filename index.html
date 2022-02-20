@@ -29,27 +29,23 @@
       <div class="main">
         <label for="inputPassword5" class="form-label search"></label>
         <form class="cityname">
-          <div class="row justify-content-center">
-            <div class="col-8">
-              <input
-                type="search"
-                id="inputPassword5"
-                class="form-control searchbar cityInput"
-                aria-describedby="passwordHelpBlock"
-                placeholder="Search City"
-                class="form-control"
-              />
-            </div>
-            <div class="col-3">
-              <button type="submit" class="btn btn-primary form-control submit">
-                Submit
-              </button>
-            </div>
-            <div class="col-1">
-              <button type="button" class="btn btn-success currentLocation">
-                <i class="fas fa-map-marker-alt location"></i>
-              </button>
-            </div>
+          <div class="experiment">
+            <button type="button" class="btn btn-success currentLocation">
+              <i class="fas fa-map-marker-alt location"></i>
+            </button>
+
+            <input
+              type="search"
+              id="inputPassword5"
+              class="form-control searchbar cityInput"
+              aria-describedby="passwordHelpBlock"
+              placeholder="Search City"
+              class="form-control"
+            />
+
+            <button type="submit" class="btn btn-primary form-control submit">
+              Submit
+            </button>
           </div>
         </form>
         <div id="passwordHelpBlock" class="form-text"></div>

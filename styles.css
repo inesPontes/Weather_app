@@ -54,6 +54,7 @@ a {
 
 .searchbar {
   border-radius: 1.25rem;
+  margin-right: 10px;
 }
 
 .city {
@@ -63,8 +64,8 @@ a {
 }
 
 .cityname {
-  max-width: 80%;
-  margin: 0 auto;
+  max-width: 90%;
+  margin: 0 auto 0 43px;
 }
 
 .date {
@@ -121,6 +122,8 @@ a {
 .submit {
   background-color: #5aa5f0;
   border-color: #5aa5f0;
+  max-width: 20%;
+  margin-right: 4px;
 }
 .submit:hover {
   background-color: #047af0;
@@ -139,9 +142,14 @@ a {
   margin: 0 5px;
 }
 
+.experiment {
+  display: flex;
+  width: 100%;
+}
 .currentLocation {
   background-color: #f3e5b1;
   border-color: #f3e5b1;
+  margin-right: 10px;
 }
 
 .currentLocation:hover {
