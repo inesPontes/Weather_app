@@ -84,6 +84,7 @@ a {
   margin-right: 30px;
   line-height: 1;
   margin-bottom: 0;
+  padding: 11px 10px 11px 10px;
 }
 
 .icon-temp {
@@ -113,7 +114,7 @@ a {
 }
 
 .weather-summary {
-  padding-top: 15px;
+  padding-top: 20px;
   font-size: 20px;
   padding-bottom: 10px;
   color: #385170;
@@ -177,7 +178,7 @@ a {
 
 .todays-conditions {
   color: #465a72;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .todaysDate {

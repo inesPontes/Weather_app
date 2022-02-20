@@ -31,10 +31,8 @@ function displayTemperature(response) {
   let temperatureElement = document.querySelector(".temp");
   temperatureElement.innerHTML = `${temperature}`;
   let description = response.data.weather[0].main;
-  let descriptionElement = document.querySelector(".weather-summary");
 
-  descriptionElement.innerHTML = `Hello 🖐 Today is going to be ${description}`;
-
+  displayMessage(description);
   displayWarning(description);
 
   let humidity = response.data.main.humidity;
@@ -59,6 +57,53 @@ function displayTemperature(response) {
   );
 
   getForecast(response.data.coord);
+}
+
+function displayMessage(description) {
+  if (description === "Rain" || description === "shower rain") {
+    document.querySelector(
+      ".weather-summary"
+    ).innerHTML = `Hello 🖐 <br> <font size="-0.5">Today it's going to be Rainy</font>`;
+  } else {
+    if (description === "Clear" || description === "clear sky") {
+      document.querySelector(
+        ".weather-summary"
+      ).innerHTML = `Hello 🖐 <br> <font size="-0.5">Today is a Sunny day!</font>`;
+    } else {
+      if (description === "Mist") {
+        document.querySelector(
+          ".weather-summary"
+        ).innerHTML = `Hello 🖐 <br> <font size="-0.5">It will be Foggy today</font>`;
+      } else {
+        if (
+          description === "Clouds" ||
+          description === "Few clouds" ||
+          description === "Scattered clouds" ||
+          description === "Broken clouds"
+        ) {
+          document.querySelector(
+            ".weather-summary"
+          ).innerHTML = `Hello 🖐 <br> <font size="-0.5">It will be Cloudy today</font>`;
+        } else {
+          if (description === "Snow") {
+            document.querySelector(
+              ".weather-summary"
+            ).innerHTML = `Hello 🖐 <br> <font size="-0.5">Today it will Snow!</font>`;
+          } else {
+            if (description === "Thundestorm") {
+              document.querySelector(
+                ".weather-summary"
+              ).innerHTML = `Hello 🖐 <br> <font size="-0.5">There's a Thunderstorm coming!</font>`;
+            } else {
+              document.querySelector(
+                ".weather-summary"
+              ).innerHTML = `Hello 🖐 <br> <font size="-0.5">Enjoy your day</font>`;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 function displayWarning(description) {
