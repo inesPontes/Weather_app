@@ -109,12 +109,12 @@ function displayMessage(description) {
 function displayWarning(description) {
   if (
     description === "Rain" ||
-    description === "shower rain" ||
-    description === "thunderstorm"
+    description === "Shower rain" ||
+    description === "Thunderstorm"
   ) {
     document.querySelector(".warning").innerHTML = `Don´t forget your umbrela!`;
   } else {
-    if (description === "Clear" || description === "few clouds") {
+    if (description === "Clear" || description === "Few clouds") {
       document.querySelector(".warning").innerHTML = `Enjoy the sun 😁`;
     } else {
       if (description === "Snow") {
@@ -129,7 +129,7 @@ function displayWarning(description) {
         } else {
           document.querySelector(
             ".warning"
-          ).innerHTML = `You won´t need your sunscrean today...`;
+          ).innerHTML = `You won´t need your sunscreen today...`;
         }
       }
     }
