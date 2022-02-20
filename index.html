@@ -19,84 +19,76 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://kit.fontawesome.com/f1aea9cd2d.js" crossorigin="anonymous"></script>
-    
-    
+    <script
+      src="https://kit.fontawesome.com/f1aea9cd2d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
- 
-
-  <div class="container"></div>  
-  <div class="main">
-    
-      <label for="inputPassword5" class="form-label search"></label>
-      <form class="cityname">
-        <div class="row justify-content-center">
-        <div class="col-8 ">
-          <input type="search" id="inputPassword5"
-          class="form-control searchbar cityInput"
-          aria-describedby="passwordHelpBlock"
-          placeholder="Search City"
-         class="form-control"
-      />
-      </div>
-       <div class= "col-3 ">
-         <button type="submit" class="btn btn-primary form-control submit">Submit</button>
-       </div>
-            <div class= "col-1">
-              <button type="button" class="btn btn-success currentLocation"><i class="fas fa-map-marker-alt location"></i></button>
+    <div class="container">
+      <div class="main">
+        <label for="inputPassword5" class="form-label search"></label>
+        <form class="cityname">
+          <div class="row justify-content-center">
+            <div class="col-8">
+              <input
+                type="search"
+                id="inputPassword5"
+                class="form-control searchbar cityInput"
+                aria-describedby="passwordHelpBlock"
+                placeholder="Search City"
+                class="form-control"
+              />
+            </div>
+            <div class="col-3">
+              <button type="submit" class="btn btn-primary form-control submit">
+                Submit
+              </button>
+            </div>
+            <div class="col-1">
+              <button type="button" class="btn btn-success currentLocation">
+                <i class="fas fa-map-marker-alt location"></i>
+              </button>
             </div>
           </div>
-          </form>
-      <div id="passwordHelpBlock" class="form-text"></div>
-      <br />
-      
-      <h1 class="city">📍 <span class="exampleCity">Lisbon</span></h1>
-      
-      <div class="row">
-        <div class="col-7">
-          <ul class="todays-weather">
-           
-          
-             <li><h3 class="todaysDate"></h3></li>
-            
-            <li> <img src="example" alt="clear" id="icon"></li>
-           <li class="temp-unit"><span class="temp">20</span>ºC</li>
-           <br>
-           <li class="warning">warning</li>
-           
-          </ul>
-        </div>
-        <div class="col-5 today">
-         
-         <div class="weather-summary"><strong>Partly clouded</strong></div>        
-         <div class="todays-conditions">
-           <div class="temp_intervale">10-25ºC></div>
-           <div class="wind">Wind: 13km/h></div> 
-           <div class="humidity">Humidity: 12%</div> 
-          </div>
-         
-       </div>
-       </div>
-      
-       <div class="forecast">
-        <h2>5 Day Forecast</h2>
-        <hr class="line">
-        <div id="weather-forecast"></div>
-      </div>
+        </form>
+        <div id="passwordHelpBlock" class="form-text"></div>
+        <br />
 
+        <h1 class="city">📍 <span class="exampleCity">Lisbon</span></h1>
+
+        <div class="row">
+          <div class="col-7">
+            <div class="todays-weather">
+              <h3 class="todaysDate"></h3>
+              <div class="d-flex align-items-center icon-temp">
+                <img src="example" alt="clear" id="icon" />
+                <p class="temp-unit"><span class="temp">20</span>ºC</p>
+              </div>
+              <p class="warning">warning</p>
+            </div>
           </div>
-            
-      <div class="coder"><a href="https://github.com/inesPontes/Weather_app">Open source code<a> by Inês Pontes</div>
+          <div class="col-5 today">
+            <div class="weather-summary"><strong>Partly clouded</strong></div>
+            <div class="todays-conditions">
+              <div class="temp_intervale">10-25ºC></div>
+              <div class="wind">Wind: 13km/h></div>
+              <div class="humidity">Humidity: 12%</div>
+            </div>
           </div>
         </div>
-        
-       </div>
-       
+
+        <div class="forecast">
+          <h2>5 Day Forecast</h2>
+          <hr class="line" />
+          <div id="weather-forecast"></div>
+        </div>
       </div>
-    
+      <div class="coder">
+        <a href="https://github.com/inesPontes/Weather_app">Open source code</a>
+        by Inês Pontes
+      </div>
+    </div>
     <script src="index.js"></script>
-    
   </body>
-  </html>
-  
+</html>

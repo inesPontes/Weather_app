@@ -73,20 +73,18 @@ function displayWarning(description) {
       document.querySelector(".warning").innerHTML = `Enjoy the sun 😁`;
     } else {
       if (description === "Snow") {
-        document.querySelector(".warning").innerHTML = `Wear a warm coat today`;
+        document.querySelector(
+          ".warning"
+        ).innerHTML = `Wear a warm coat today!`;
       } else {
-        if (
-          description === "scattered clouds" ||
-          description === "broken clouds" ||
-          description === "clouds"
-        ) {
+        if (description === "mist") {
           document.querySelector(
             ".warning"
-          ).innerHTML = `You won´t need your sunscrean today`;
+          ).innerHTML = `With mist, drive carefully ⚠`;
         } else {
           document.querySelector(
             ".warning"
-          ).innerHTML = `With mist, drive carefully`;
+          ).innerHTML = `You won´t need your sunscrean today...`;
         }
       }
     }

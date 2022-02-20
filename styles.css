@@ -78,10 +78,17 @@ a {
 .warning {
   background-color: #f3e5b1;
   border-radius: 1.25rem;
-  margin-top: 31px;
-  margin-right: 48px;
-  text-align: left;
+  text-align: center;
   margin-left: 0;
+  margin-right: 30px;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.icon-temp {
+  position: relative;
+  left: -23px;
+  top: -10px;
 }
 
 .temp,
@@ -92,9 +99,7 @@ a {
 }
 
 .temp-unit {
-  position: relative;
-  top: -18px;
-  left: -35px;
+  margin: 0;
 }
 
 .today {
@@ -169,13 +174,6 @@ a {
 
 .todaysDate {
   font-size: 25px;
-}
-
-#icon {
-  float: left;
-  position: relative;
-  top: -38px;
-  left: -25px;
 }
 
 .line {
