@@ -93,6 +93,10 @@ a {
   top: -10px;
 }
 
+.min-forecast-temp {
+  color: #6a6e74;
+}
+
 .temp,
 .temp-unit {
   font-size: 20px;
@@ -224,5 +228,5 @@ a {
 }
 
 .temp-forecast {
-  font-size: 13px;
+  font-size: 12px;
 }

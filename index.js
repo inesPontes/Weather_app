@@ -70,7 +70,7 @@ function displayMessage(description) {
         ".weather-summary"
       ).innerHTML = `Hello 🖐 <br> <font size="-0.5">Today is a Sunny day!</font>`;
     } else {
-      if (description === "Mist") {
+      if (description === "Haze") {
         document.querySelector(
           ".weather-summary"
         ).innerHTML = `Hello 🖐 <br> <font size="-0.5">It will be Foggy today</font>`;
@@ -122,7 +122,7 @@ function displayWarning(description) {
           ".warning"
         ).innerHTML = `Wear a warm coat today!`;
       } else {
-        if (description === "mist") {
+        if (description === "Haze") {
           document.querySelector(
             ".warning"
           ).innerHTML = `With mist, drive carefully ⚠`;
@@ -205,9 +205,9 @@ function displayForecast(response) {
         /></li>
    <li class="temp-forecast"><span class="min-forecast-temp">${Math.round(
      forecastDay.temp.min
-   )}ºC</span> - <span class="max-forecast-temp">${Math.round(
+   )}ºC</span>   / <span class="max-forecast-temp"><strong>${Math.round(
           forecastDay.temp.max
-        )}ºC</span></li>
+        )}ºC</span></strong></li>
    
   </ul>
   </div>`;
